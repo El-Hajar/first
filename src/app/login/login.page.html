@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>login </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  <!-- <div *ngIf="!connected"> -->
+  <div>
+
+    <form>
+      <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="text" [(ngModel)]="email" name="email" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="login()" type="submit" routerLink="/{{uid}}/formations">SE CONNECTER</ion-button>
+        </ion-col>
+
+      </ion-row>
+
+    </form>
+    
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+        Vous n'avez pas un compte?
+        <ion-buttons slot="end" fill="clear" routerLink="/register">
+          <h6>S'inscrire</h6>
+
+        </ion-buttons>
+      </ion-buttons>
+
+    </ion-toolbar>
+   
+  </div>
+</ion-content>

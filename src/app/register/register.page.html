@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form  >
+  
+    <ion-item lines="full">
+      <ion-label position="floating">Nom</ion-label>
+      <!-- <ion-input type="text" formControlName="Nom" required></ion-input> -->
+      <ion-input type="text" [(ngModel)]='firstName' name="firstName" required></ion-input>
+    </ion-item>
+  
+    <ion-item lines="full">
+      <ion-label position="floating">Prenom</ion-label>
+      <ion-input type="text" [(ngModel)]='lastName' name="lastName" required></ion-input>
+    </ion-item>
+  
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" [(ngModel)]='email' name="email" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Tel</ion-label>
+      <ion-input type="text" [(ngModel)]='phone' name="phone" required></ion-input>
+    </ion-item>
+  
+    <ion-item lines="full">
+      <ion-label position="floating">Mot de passe</ion-label>
+      <ion-input type="password" [(ngModel)]='password' name="password" required></ion-input>
+    </ion-item>
+  
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" (click)="register()" routerLink="/login">S'INSCRIRE</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+ 
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      Vous avez deja un compte?
+      <ion-buttons slot="end" fill="clear" routerLink="/login">
+
+        <h6>S'identifier</h6>
+
+      </ion-buttons>
+    </ion-buttons>
+
+  </ion-toolbar>
+  
+  <!-- <ion-toolbar>
+    <!--  <ion-buttons slot="end" class="btncolor" fill="clear" routerLink="/tabs"> 
+    <ion-buttons slot="end" class="btncolor" fill="clear" (click)="addpay()">
+      Passer cett etape
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+
+
+    </ion-buttons>
+  </ion-toolbar> -->
+</ion-content>

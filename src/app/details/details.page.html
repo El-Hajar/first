@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Formation {{formation?.nom}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen >
+  <ion-card >
+    <img [src]="formation?.logo" height="200px" width="200 px" />
+    <ion-card-header>
+      <ion-card-subtitle>a partir de : {{formation?.date}}</ion-card-subtitle>
+      <ion-card-title>Durée : {{formation?.duree}}</ion-card-title>
+    </ion-card-header>
+   
+    <ion-card-content>
+      <ion-label>
+        
+       <h1>{{formation?.description}}</h1>
+       
+      </ion-label>
+      <ion-button (click)="reserverFormation()">Reserver</ion-button>   
+    </ion-card-content>
+  </ion-card>
+</ion-content>

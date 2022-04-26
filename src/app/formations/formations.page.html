@@ -1,0 +1,27 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>Welcome</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <!-- inset => padding -->
+  <ion-card inset="true" [routerLink]="['/details',formation.id]" detail *ngFor="let formation of formations |async"> 
+   
+
+
+    <ion-item   >
+      <ion-avatar slot="start">
+        <img [src]="formation.logo" [alt]="formation.nom" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{formation.nom}}</h2>
+        <h3>Framwork</h3>
+        <p>Framework javascript...</p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+ 
+
+  
+</ion-content>
